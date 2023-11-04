@@ -1,0 +1,20 @@
+D) All of the above
+B) 50's
+C) Third
+B) i-True, ii-True
+D) All i, ii, iii, iv and v
+C) Short-term scheduling
+A) demand paging
+B) Segmentation method
+B) Monolithic kernel
+D) Macro kernel
+A) File management
+D) i-c, ii-a, iii-b
+C) Circular waits
+B) Disk scheduling
+A) Seek time
+A) SCAN
+B) SSTF
+A) Multithreading
+B) i-True, ii-True
+A) Job control language (JCL)
