@@ -2,27 +2,74 @@
 
 
 fileText = open("generalQuestions.txt", "r")
+answerText = open("generalAnswers.txt", "r")
 
 text = fileText.readlines()
 
+answerfile = answerText.readlines()
 
 questions = []
 
+
+
+class question:
+    def __init__(self, questionText, A, B, C, D, answer):
+        self.questionText = questionText
+        self.A = A
+        self.B = B
+        self.C = C
+        self.D = D
+        self.answer = answer
+
+
+answers = []
+
+for line in answerfile:
+    answers.append(line[0]) # just using the letter to verify answer
+    
+
 for line in text:
+    if line in ("", " ", "\n"):
+        text.remove(line)
+
+
+
+previousLineWasQuestion = False
+for line in text:
+        
     if line[1] == ")":
         if line[0] == "A":
-            pass
+            A = line
+            print(A)
+            
         elif line[0] == "B":
-            pass
+            B = line
+            
         elif line[0] == "C":
-            pass
+            C = line
+            
         elif line[0] == "D":
-            pass
+            D = line
+            if questions == []:
+                questions.append(question(questionText, A, B, C, D, answers[len(questions)]))
         else:
-            questions.append(line)
+            questionText = line
+            print("Hit text")
+            if questions != []: #as long as it isn't the first question, we should immediately append the last data
+                questions.append(question(questionText, A, B, C, D, answers[len(questions)]))
+                print("index = ", len(questions))
+
     else:
-        questions.append(line)
+        questionText = line
+        print("index = ", len(questions))
+        if questions != []: #as long as it isn't the first question, we should immediately append the last data
+            questions.append(question(questionText, A, B, C, D, answers[len(questions)]))
 
 
+print("got out of loop")
+questions.append(question(questionText, A, B, C, D, answers[-1])) # because the appending is triggered when the next question is asked
+
+for q in questions:
+    print(q.questionText, q.answer)
 
 
