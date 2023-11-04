@@ -1,0 +1,28 @@
+import openai
+
+# OpenAI API key 
+#I might need someone to implement this directly onto main, I'm unsure how to link it with the rest of the branches, thanks. 
+openai.api_key = 'YOUR_OPENAI_API_KEY'
+
+# function defined and interacts with chat. if there are any additions you would like me to make, let me know. 
+def chat_with_gpt(prompt, max_tokens=150):
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=prompt,
+        max_tokens=max_tokens
+    )
+    return response.choices[0].text.strip()
+
+# Example conversation a user might have. It's simple for now, but it is an overview of how we could converse with chat
+def main():
+    print("Welcome to the Chat bot!")
+    print("Start the conversation. Type 'exit' to end chat.")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == 'exit':
+            break
+        response = chat_with_gpt(user_input)
+        print("Chatbot GPT:", response)
+
+if __name__ == '__main__':
+    main()
