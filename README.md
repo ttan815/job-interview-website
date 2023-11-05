@@ -6,7 +6,7 @@ L1CC SACHACKS23
 Installation:
 pip install Flask
 pip install Jinja2
-Have Python Installed: https://www.python.org/downloads/ 
+Have Python Installed: https://www.python.org/downloads/
 
 Running Server:
 1.) Navigate to the server.py
