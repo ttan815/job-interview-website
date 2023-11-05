@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+        background-color: black;
+    }
+
+    .left-bar, .right-bar {
+        flex: 1;
+        background-color: black;
+    }
+
+    .center-content {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .question-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-bar"></div>
+        <div class="center-content">
+            <div class="question-box">
+                <h2>Your Question Here</h2>
+            </div>
+        </div>
+        <div class="right-bar"></div>
+    </div>
+</body>
+</html>
