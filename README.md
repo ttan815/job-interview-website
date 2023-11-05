@@ -8,7 +8,7 @@ pip install Flask
 pip install Jinja2
 Have Python Installed: https://www.python.org/downloads/
 
-Running Server:
+Running Server: 
 1.) Navigate to the server.py
 2.) Run the File:
 
