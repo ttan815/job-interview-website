@@ -1,9 +1,11 @@
 '''Will handle back-end for the project'''
 
 
-import json
+from flask import Flask, render_template
 
-fileText = open("generalQuestions.txt", "r")
+app = Flask(__name__)
+
+fileText = open("generalQuestions.txt", "r") # change this so gets data from clicked and uses that file
 answerText = open("generalAnswers.txt", "r")
 
 text = fileText.readlines()
@@ -74,3 +76,14 @@ for line in text:
 questions.append(question(questionText, A, B, C, D, answers[-1])) # because the appending is triggered when the next question is asked
 
 
+@app.route('/') # currently set to home page, change to whatever page we name question and answer page
+def default():
+    return render_template("basic website html") # do I also need .html?
+
+@app.route('/questions') # needs to coordinate with the HTML code
+def index():
+    return render_template('index.html', XXXXX=questions) # IMPORTANT replace XXXXX with the list in HTML
+
+'''In the HTML section, need to make sure that /questions is set to the page name, /questions needs to interpret
+the of question-class objects. HTML will have to get the question text, A, B, C, D (possibly using value = '{{ soandso}}'
+format) and the answer from the objects to display them all, and hide the answer until an option is clicked'''
