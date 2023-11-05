@@ -1,6 +1,8 @@
 '''Will handle back-end for the project'''
 
 
+import json
+
 fileText = open("generalQuestions.txt", "r")
 answerText = open("generalAnswers.txt", "r")
 
@@ -66,10 +68,9 @@ for line in text:
             questions.append(question(questionText, A, B, C, D, answers[len(questions)]))
 
 
-print("got out of loop")
-questions.append(question(questionText, A, B, C, D, answers[-1])) # because the appending is triggered when the next question is asked
 
-for q in questions:
-    print(q.questionText, q.answer)
+
+
+questions.append(question(questionText, A, B, C, D, answers[-1])) # because the appending is triggered when the next question is asked
 
 
