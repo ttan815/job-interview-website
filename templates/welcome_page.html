@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Interview Prep Pal</title>
+    <link rel="stylesheet" href="../static/styles-main.css">
+
+
+    
+</head>
+<body>
+    <div class="top-bar">
+        <h1 id="text-top-bar">Job Interview Preparation For: {{ the_title }}</h1>
+        <h1 id="text-top-bar"></h1>
+    </div>
+
+    <div class="logo-website">
+        <img class= "title-logo" src="../static/FAANG.png">
+    </div>
+<div id="main-container">
+
+    <div id="chat-gpt-box">
+        <p id="chat-gpt-text">Please Select The Interview Questions You'd Like Practice</p>
+    </div>
+    
+    <div id="FAANG-question-container">
+        <div class="FAANG-buttons">
+    
+            <a href="{{ url_for('meta') }}">
+                <button class="FAANG-question-button button-look" id="facebook">
+                    <img class="logo" src="../static/meta_logo.png">
+                </button>
+            </a>            
+            
+            <a href="{{ url_for('apple') }}">
+            <button class="FAANG-question-button button-look" id="apple">
+                <img class="logo" src="../static/apple_logo.png">
+            </button>
+            </a> 
+            
+            <a href="{{ url_for('amazon') }}">
+            <button class="FAANG-question-button button-look" id="amazon">
+                <img class="logo" src="../static/amazon_logo.jpg">
+            </button>
+            </a> 
+    
+            <a href="{{ url_for('netflix') }}">
+            <button class="FAANG-question-button button-look" id="netflix">
+                <img class="logo" src="../static/netflix_logo.png">
+            </button class="FAANG-question-button button-look">
+            </a> 
+    
+            <a href="{{ url_for('google') }}">
+            <button class="FAANG-question-button button-look" id="google">
+                <img class="logo" src="../static/Google-Logo-3014348739.png">
+            </button>
+            </a> 
+
+        </div>
+        
+
+    </div>
+</div>
+
+</body>
+</html>
